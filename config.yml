@@ -1,6 +1,7 @@
 backend:
   name: github
-  repo: https://github.com/pirati-web/piskoviste
+  repo: pirati-web/piskoviste   # Path to your Github repository
+  branch: gh-pages              # Branch to update
 
 media_folder: "static/media"
 
