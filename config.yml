@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: https://github.com/pirati-web/piskoviste
+
+media_folder: "static/media"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "posts" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "články" # Used in the UI, ie.: "New Post"
+    folder: "_posts"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Titulek", name: "title", widget: "string", tagname: "h1", required: true}
+      - {label: "Publikovano", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mma", required: true}
+      - {label: "Plakatek", name: "image", widget: "image", required: false, tagname: ""}
+      - {label: "Obsah", name: "body", widget: "markdown", required: true}
+    meta:
+      - {label: "SEO Popisek", name: "description", widget: "text", required: true}
+      - {label: "SEO tagy", name: "tags", widget: "text", required: true}
+    card: {type: "image", image: "image", text: "title", required: true}
