@@ -2,7 +2,7 @@ backend:
   name: github
   repo: pirati-web/piskoviste   # Path to your Github repository
   branch: gh-pages              # Branch to update
-  siteId: cms.netlify.com
+  site_domain: cms.netlify.com
 
 media_folder: "static/media"
 
