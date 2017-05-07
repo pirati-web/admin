@@ -4,11 +4,25 @@ Je build [Netlify CMS](https://www.netlifycms.org/) ktery si muzes pomoci git su
 
 ## Postup
 
-- udelej si branch teto repository pojmenovanou, aby bylo jasne, kteremu webu patri
+- udelej si branch teto repository pojmenovanou, aby bylo jasne, kteremu webu patri (napr. jihocesky)
+```
+git branch jihocesky
+```
 - pokud nutne potrebujes nejake extra kolekce nebo jine extra veci, uprav si [config.yml](config.yml)
-- uprav si index.html k obrazu svemu
+- uprav si index.html k obrazu svemu (napr. [takto](https://github.com/pirati-web/admin/commit/6d98a3486fe9d08c35cf9f6c8bf43299e665ff19))
+- pushni branch
+```
+git push origin jihocesky
+```
 - pripoj si branch ke svemu webu:
 
 ```
-TBD
+cd <tam, kde mas vyclonovanou repo s webem>
+git submodule add git@github.com:pirati-web/admin.git admin
+```
+- pushni zmeny (pripojeny submodul)
+```
+git add admin
+git commit -m "admin submodule added"
+git push origin gh-pages
 ```
