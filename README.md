@@ -19,7 +19,10 @@ git push origin jihocesky
 ```
 cd <tam, kde mas vyclonovanou repo s webem>
 git submodule add https://github.com/pirati-web/admin admin
+# checkout your branch
+cd admin
 git checkout jihocesky
+cd ..
 ```
 - pushni zmeny (pripojeny submodul)
 ```
