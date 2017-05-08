@@ -1,10 +1,10 @@
 backend:
   name: github
-  repo: pirati-web/piskoviste   # Path to your Github repository
+  repo: pirati-web/jihomoravsky.pirati.cz   # Path to your Github repository
   branch: gh-pages              # Branch to update
   base_url: https://piraweboauth.herokuapp.com
 
-media_folder: "static/media"
+media_folder: "assets/img/posts"
 
 collections: # A list of collections the CMS should be able to edit
   - name: "posts" # Used in routes, ie.: /admin/collections/:slug/edit
