@@ -1,10 +1,10 @@
 backend:
   name: github
-  repo: pirati-web/piskoviste   # Path to your Github repository
+  repo: pirati-web/praha.pirati.cz   # Path to your Github repository
   branch: gh-pages              # Branch to update
   base_url: https://piraweboauth.herokuapp.com
 
-media_folder: "static/media"
+media_folder: "assets/img"
 
 collections: # A list of collections the CMS should be able to edit
   - name: "posts" # Used in routes, ie.: /admin/collections/:slug/edit
@@ -20,6 +20,5 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Autor", name: "author", widget: "string", required: true}
       - {label: "Plakatek", name: "image", widget: "image", required: false, tagname: ""}
       - {label: "Obsah", name: "body", widget: "markdown", required: true}
-      - {label: "SEO Popisek", name: "description", widget: "text", required: true}
-      - {label: "SEO tagy", name: "tags", widget: "text", required: true}
+      - {label: "Tagy", name: "tags", widget: "text", required: true}
     card: {type: "image", image: "image", text: "title", required: true}
